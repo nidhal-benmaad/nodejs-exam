@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+
+
+</head>
+
+<body>
+    <form action="/home/addform" method="post">
+        <input type="text" name="libelle" />
+        <input type="number" name="prix" />
+        <input type="number" name="qnt" />
+        <input type="submit" value="OK" />
+
+
+    </form>
+    <hr>
+    <form action="/home/filter" method="get">
+        <input type="text" name="searchQuery" />
+        <input type="submit" value="OK" />
+    </form>
+    <table border="1">
+        <tr>
+            <td>Libelle</td>
+            <td>Prix</td>
+            <td>QNT</td>
+            <td>Action</td>
+
+        </tr>
+        {% for item in data %}
+
+        <tr>
+            <td>{{item.libelle}}</td>
+            <td> {{item.prix}}</td>
+            <td> {{item.qnt }}</td>
+            <td><a href="/home/details/{{item._id }}">details</a></<td>
+
+        </tr>
+
+        {% endfor %}
+    </table>
+
+
+
+</body>
+
+
+<html>

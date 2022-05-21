@@ -1,0 +1,24 @@
+<html>
+<head>
+
+
+
+</head>
+<body>
+<form action="/home/putform" method="post">
+<input type="text" name="libelle" value="{{data.libelle}}" />
+<input type="number" name="prix" value="{{data.prix}}"/>
+<input type="number" name="qnt" value="{{data.qnt}}"/>
+<input type="hidden" name="secretid" value="{{data._id}}"/>
+<input type="submit" value="modifier" />
+<a href="/home/delete/{{data._id}}">delete</a>
+
+
+</form>
+
+
+
+</body>
+
+
+<html>
